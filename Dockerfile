@@ -1,13 +1,8 @@
-version: "3.8"
+FROM mysql:8.0
 
-services:
-  mysqlcsdevportfolio01:         
-    image: mysql:8.0
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: laravel
-      MYSQL_USER: laravel
-      MYSQL_PASSWORD: secret
-    ports:
-      - "3306:3306"
+ENV MYSQL_ROOT_PASSWORD=root
+ENV MYSQL_DATABASE=laravel
+ENV MYSQL_USER=laravel
+ENV MYSQL_PASSWORD=secret
+
+EXPOSE 3306
